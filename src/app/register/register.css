@@ -1,0 +1,154 @@
+/* Register Page Styles */
+.reg-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  background: var(--bg-page);
+}
+
+.reg-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.reg-hero h1 {
+  font-size: 2.125rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  color: var(--text-main);
+}
+.reg-hero p {
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0.75rem auto;
+}
+.reg-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-violet);
+  color: white;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.badge-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+.reg-container {
+  width: 100%;
+  max-width: 720px;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section {
+  border-top: 1px solid rgba(0,0,0,0.07);
+  padding-top: 1.5rem;
+}
+.form-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+.full-width { grid-column: 1 / -1; }
+label {
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.req { color: var(--violet-mid); margin-left: 2px; }
+input, select, textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--bg-surface);
+  transition: border var(--transition-fast);
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--violet-mid);
+  box-shadow: 0 0 0 2px rgba(127,71,255,0.15);
+}
+.error { border-color: #e53935; }
+.field-error {
+  color: #e53935;
+  font-size: 0.825rem;
+  margin-top: 0.25rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.btn-register {
+  background: var(--gradient-violet);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: var(--transition-normal);
+}
+.btn-register:hover { transform: translateY(-2px); }
+.btn-reset {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+}
+.btn-reset:hover { background: rgba(0,0,0,0.04); }
+
+/* Success Card */
+.reg-success-card {
+  background: var(--card-bg);
+  padding: 2rem 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  max-width: 500px;
+}
+.success-icon {
+  font-size: 3rem;
+  color: var(--violet-mid);
+  margin-bottom: 0.5rem;
+}
+.btn-home {
+  margin-left: 1rem;
+  color: var(--text-main);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .reg-container { padding: 1.5rem; }
+  .form-actions { flex-direction: column; align-items: stretch; }
+}
